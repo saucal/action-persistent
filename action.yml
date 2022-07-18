@@ -1,0 +1,34 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  token:  # id of input
+    description: 'GH Token'
+    required: false
+    default: "${{ github.token }}"
+  branch:  # id of input
+    description: 'Branch to use as permanent fs'
+    required: false
+    default: 'persistent-fs'
+  get:
+    description: 'Key to get'
+    required: false
+    default: ''
+  default:
+    description: 'Default returned if key being get does not exist'
+    required: false
+    default: ''
+  set:
+    description: 'Key to set'
+    required: false
+    default: ''
+  value:
+    description: 'Value to set'
+    required: false
+    default: ''
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'main.js'
+  post: 'post.js'

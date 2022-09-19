@@ -8,7 +8,7 @@ inputs:
   branch:  # id of input
     description: 'Branch to use as permanent fs'
     required: false
-    default: 'persistent-fs/${{ github.ref }}'
+    default: 'persistent-fs/${{ github.ref_name }}'
   get:
     description: 'Key to get'
     required: false

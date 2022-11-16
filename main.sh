@@ -25,7 +25,7 @@ fi
 
 maybe_output() {
 	if [ -n "$2" ]; then
-		echo "::set-output name=value::$1"
+		echo "value=$1" >> "$GITHUB_OUTPUT"
 	fi
 }
 
